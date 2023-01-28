@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+}
+
+::-webkit-scrollbar{
+    width: 1px;
+}
+
+.wrapper{
+    width: 310px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #000;
+}
+.wrapper .title{
+    background: #fec356;
+    border: 3px solid #fff;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 88px;
+    text-align: center;
+    border-bottom: 1px;
+    border-radius: 4px 4px 0 0;
+}
+.wrapper .conversation{
+    padding: 20px 15px;
+    min-height: 410px;
+    max-height: 410px;
+    overflow-y: auto;
+}
+.wrapper .conversation .inbox{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: baseline;
+}
+.wrapper .conversation .user-inbox{
+    justify-content: flex-end;
+}
+.wrapper .conversation .caption{
+    color: rgb(24, 25, 25);
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    font-size: 14px;
+}
+.wrapper .conversation .user-caption{
+    justify-content: flex-end;
+}
+.wrapper .conversation .inbox .msg-header{
+    max-width: 74%;
+    margin-left: 2px;
+}
+.conversation .inbox .msg-header p{
+    color: #ffff00;
+    background: #800000;
+    border-radius: 4px 14px 14px 14px;
+    padding: 11px 17px;
+    font-size: 13px;
+    word-break: break-all;
+}
+.conversation .user-inbox .msg-header p{
+    color: #000;
+    background: #eee;
+    border-radius: 14px 4px 14px 14px;
+}
+.wrapper .typing-field{
+    display: flex;
+    height: 46px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #fff;
+    border-top: 1px solid #d7cfcf;
+    border-radius: 0 0 4px 4px;
+}
+.wrapper .typing-field .input-data{
+    height: 40px;
+    width: 310px;
+    position: relative;
+}
+.wrapper .typing-field .input-data input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0 80px 0 13px;
+    font-size: 12px;
+}
+.input-data input::placeholder{
+    color: #bfbfbf;
+}
+.wrapper .typing-field .input-data button{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+    border-radius: 4px;
+    background: #4f0c03;
+    border: 1px solid #4f0c03;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.wrapper .typing-field .input-data input:valid~button{
+    opacity: 1;
+    pointer-events: auto;
+}
+.typing-field .input-data button:hover{
+    background: #ce556f;
+}
